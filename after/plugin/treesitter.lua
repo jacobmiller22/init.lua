@@ -1,4 +1,4 @@
-require 'nvim-treesitter.configs'.setup {
+require 'nvim-treesitter.configs'.setup({
     -- A list of parser names, or "all"
     ensure_installed = { "vimdoc", "python", "javascript", "typescript", "c", "lua", "rust", "java", "go", "query" },
 
@@ -19,4 +19,7 @@ require 'nvim-treesitter.configs'.setup {
         -- Instead of true it can also be a list of languages
         additional_vim_regex_highlighting = false,
     },
-}
+    autotag = {
+        enable = true,
+    }
+})
