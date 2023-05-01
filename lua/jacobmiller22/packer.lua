@@ -69,16 +69,10 @@ return require('packer').startup(function(use)
 
     use({ 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' })
 
-    
-
     use('numToStr/Comment.nvim')
 
     use {
         "windwp/nvim-autopairs",
-        wants = "nvim-treesitter",
-        module = { "nvim-autopairs.completion.cmp", "nvim-autopairs" },
-        config = function()
-            require("config.autopairs").setup()
-        end,
+        config = function() require("nvim-autopairs").setup {} end
     }
 end)
